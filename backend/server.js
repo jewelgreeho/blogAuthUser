@@ -19,19 +19,10 @@ connectDatabase();
 
 
 
-const hostname = '0.0.0.0';
-const port = 4000;
 
 
-
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
-
-
-
-const server = app.listen(port, hostname, () => {
-    console.log(`Backend Server started on port: ${port} in ${hostname}`);
+const server = app.listen(process.env.port, () => {
+    console.log(`Backend Server started on port: ${process.env.port} in ${process.env.NODE_ENV}`);
 })
 
 //Handle unhandle promise rejection

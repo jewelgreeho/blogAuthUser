@@ -6,7 +6,6 @@ const {
 } = require("../controllers/authController");
 
 
-
 //below post route url
 router.route('/register').post(registerUser);
 router.route('/login').post(loginUser);
